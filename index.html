@@ -13,34 +13,39 @@
 
 <body>
   <div class="container"> <!--This div contains the container of the page-->
-      <div class="container-input form-group row "> <!--This div contains the input fields-->
-        <div class="day col-sm-2">
-          <label for="day" class="col-form-label col-sm-2">DAY</label>
-          <input type="number" min="01" max="31" id="day" placeholder="DD" class="form-control custom-input">
+      <div class="container-input"> <!--This div contains the input fields-->
+        <div class="inputs-row">
+          <div class="day">
+            <label for="day">DAY</label>
+            <input type="number" min="01" max="31" id="day" placeholder="DD" class="custom-input">
+            <span class="error-message" id="day-error"></span>
+          </div>
+          <div class="month">
+            <label for="month">MONTH</label>
+            <input type="number" min="01" max="12" id="month" placeholder="MM" class="custom-input">
+            <span class="error-message" id="month-error"></span>
+          </div>
+          <div class="year">
+            <label for="year">YEAR</label>
+            <input type="number" max="2025" id="year" placeholder="YYYY" class="custom-input">
+            <span class="error-message" id="year-error"></span>
+          </div>
         </div>
-        <div class="month col-sm-2">
-          <label for="month" class="col-form-label col-sm-2">MONTH</label>
-          <input type="number" min="01" max="12" id="month" placeholder="MM" class="form-control custom-input">
+        <div class="divider-container">
+          <div class="divider-line"></div>
+          <button id="calculate"><img src="assets/images/icon-arrow.svg" alt="arrow"></button>
         </div>
-        <div class="year col-sm-2">
-          <label for="year" class="col-form-label col-sm-2">YEAR</label>
-          <input type="number" max="2025" id="year" placeholder="YYYY" class="form-control custom-input">
-        </div> 
-      </div>
-      <div class="button-container d-flex align-items-center">
-        <hr class="flex-grow-1 me-3">
-        <button id="calculate"><img src="assets/images/icon-arrow.svg" alt="arrow"></button>
       </div>
       
-      <div class="result-container mt-5"> <!--This div contains the result of the calculation-->
-        <div class=" result result-years">
-          <p id="years"> <span id="years-value" class="value">0</span> years</p>
+      <div class="result-container"> <!--This div contains the result of the calculation-->
+        <div class="result result-years">
+          <p id="years"><span id="years-value" class="value">0</span><span class="unit"> years</span></p>
         </div>
-        <div class=" result result-months">
-          <p id="months"> <span id="months-value" class="value">0</span> months</p>
+        <div class="result result-months">
+          <p id="months"><span id="months-value" class="value">0</span><span class="unit"> months</span></p>
         </div>
-        <div class=" result result-days">
-          <p id="days"> <span id="days-value" class="value">0</span> days</p>
+        <div class="result result-days">
+          <p id="days"><span id="days-value" class="value">0</span><span class="unit"> days</span></p>
         </div>
       </div>
   </div>
