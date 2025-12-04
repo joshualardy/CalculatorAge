@@ -1,0 +1,97 @@
+:root {
+    --evidence-color: hsl(259, 100%, 65%);
+    --error-color: hsl(0, 100%, 67%);
+    --black-font-color: hsl(0, 0%, 0%);
+    --outline-color: hsl(0, 1%, 44%);
+    --background-color: hsl(0, 0%, 86%);
+    --white-background-color: hsl(0, 100%, 100%);
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--background-color);
+    color: var(--black-font-color);
+    width: 750px;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+   
+}
+.container {
+    background-color: var(--white-background-color);
+    padding: 20px;
+    border-radius: 20px 20px 100px 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    height: 600px;
+ 
+}
+/*Configuration and syle of the input fields*/
+.container-input ::-webkit-inner-spin-button, 
+.container-input ::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.container-input {
+    margin: 40px 20px;
+
+}
+/*Configuration and style of the input fields*/
+.custom-input{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--black-font-color);
+    border: 1px solid var(--outline-color);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/*Configuration and syle of the button*/
+#calculate{
+   border-radius: 50%;
+   background-color: var(--evidence-color);
+   padding: 10px;
+   width: 70px;
+   height: 70px;
+   border: none;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   margin-left: 10px;
+}
+#calculate:hover {
+    background-color: var(--black-font-color);
+}
+
+.result{
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--black-font-color);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-style: italic;
+}
+.value{
+    color: var(--evidence-color);
+}
